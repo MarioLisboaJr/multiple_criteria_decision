@@ -297,7 +297,7 @@ Pontos de atenção para elaboração desta matriz:
 - É uma matriz de Alternativas por Critérios;
 - Para AHPSaaty n deve ser menor ou igual a 15, caso contrário, utilizar AHPGaussiano.
 
-  \             |  Critério 1   |  Critério 2   |  ...   | Critério n  
+\               |  Critério 1   |  Critério 2   |  ...   | Critério n  
 :--------------:|:-------------:|:-------------:|:------:|:-----------:
 Alternativa 1   | 1200          |  12           |  ...   |  24  
 Alternativa 2   | 1500          |  12           |  ...   |  18  
