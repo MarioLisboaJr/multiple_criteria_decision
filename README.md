@@ -15,15 +15,15 @@ AHP foi um método desenvolvido em 1970 por [Thomas Saaty](https://pt.wikipedia.
 
 [Instalação](#Instalação) <br>
 [Documentação](#Documentação): <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Classe AHP](#mcdm.ahp.AHPSaaty) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Classe AHP-Gaussiano](#mcdm.ahp.AHPGaussiano) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Classe AHP <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Classe AHP-Gaussiano <br>
 [Aplicação](#Aplicação): <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Escolha do novo Diretor na Empresa](#Escolha-do-novo-Diretor-na-Empresa:) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Escolha de compra para o novo celular](#Escolha-de-compra-para-o-novo-celular:) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Escolha do novo Diretor na Empresa <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Escolha de compra para o novo celular <br>
 [Apêndice](#Apêndice): <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Escala Fundamental de Saaty](#Escala-Fundamental-de-Saaty:) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Matriz de Julgamentos](#Matriz-de-Julgamentos:) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Matriz de Decisão](#Matriz-de-Decisão:)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Escala Fundamental de Saaty <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matriz de Julgamentos <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matriz de Decisão
 
 
 <hr>
@@ -43,7 +43,7 @@ classe mcdm.ahp.AHPSaaty(matriz_julgamentos, objetivo='max')
 Analytic Hierarchy Process (AHP) é um método criado por Thomas Saaty para auxiliar nas tomadas de decisão multicritério. Caracterizado por uma matriz de decisão composta por alternativas e critérios ponderados pelo tomador de decisão em questão. Baseado em matemática e psicologia, o AHP não só determina a melhor decisão como também justifica a escolha.
     
 **Restrição**: auxilia a tomada de decisão para problemas com até 15 critérios. <br>
-Para problemas com mais de 15 critérios, verificar [AHPGaussiano](#mcdm.ahp.AHPGaussiano). <br>
+Para problemas com mais de 15 critérios, verificar AHPGaussiano. <br>
 
 ### Parâmetro:
 
@@ -275,7 +275,7 @@ Pontos de atenção para elaboração desta matriz:
 
 - É uma Matriz quadrada;
 - A avaliação dos critérios é feita sempre por linha em relação a coluna;
-- A avaliação deve respeitar Grau de Importância e sua Recíproca da [Escala Saaty](#Escala-Fundamental-de-Saaty:)
+- A avaliação deve respeitar Grau de Importância e sua Recíproca da Escala Saaty
 - Note que sua diagonal principal é sempre igual a 1;
 - À esquerda da diagonal principal é sempre igual ao inverso à direita da diagonal principal (Axioma da Reciprocidade).
 
@@ -288,18 +288,18 @@ Critério n   |   1/3         |   6           |   3           | ``1``
 
 Note:
 
-- Considerando que o **Critério 1 é Muito Mais Importante que o Critério 2**, pela [Escala Fundamental de Saaty](#Escala-Fundamental-de-Saaty:), atribuímos ao campo o valor **7**. Logo, **Critério 2 é Muito Menos Importante que o Critério 1** e portanto deve ser atribuído o valor de **1/7**. 
+- Considerando que o **Critério 1 é Muito Mais Importante que o Critério 2**, pela Escala Fundamental de Saaty, atribuímos ao campo o valor **7**. Logo, **Critério 2 é Muito Menos Importante que o Critério 1** e portanto deve ser atribuído o valor de **1/7**. 
 
 ## Matriz de Decisão:
 
 Pontos de atenção para elaboração desta matriz:
 
 - É uma matriz de Alternativas por Critérios;
-- Para [AHPSaaty](#mcdm.ahp.AHPSaaty) n deve ser menor ou igual a 15, caso contrário, utilizar [AHPGaussiano](#mcdm.ahp.AHPGaussiano).
+- Para AHPSaaty n deve ser menor ou igual a 15, caso contrário, utilizar AHPGaussiano.
 
-  \  |  Critério 1   |  Critério 2   |  ...   | Critério n  
-:---:|:-----:|:-----:|:-----:|:-----:
-Alternativa 1   | 1200  |  12   |  ...  |  24  
-Alternativa 2   | 1500  |  12   |  ...  |  18  
-...   | ... | ... | ... | ...
-Alternativa m | 5000  |  20   |  ...  |  10  
+  \             |  Critério 1   |  Critério 2   |  ...   | Critério n  
+:--------------:|:-------------:|:-------------:|:------:|:-----------:
+Alternativa 1   | 1200          |  12           |  ...   |  24  
+Alternativa 2   | 1500          |  12           |  ...   |  18  
+...             | ...           | ...           | ...    | ...
+Alternativa m   | 5000          |  20           |  ...   |  10  
